@@ -5,6 +5,6 @@ export type InputProps = {
   name: string;
   value: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  //onSubmit?: (e: React.FormEvent<HTMLInputElement>) => void;
+  onSubmit?: (e: React.FormEvent<HTMLInputElement>) => void;
   inset?: boolean;
 };

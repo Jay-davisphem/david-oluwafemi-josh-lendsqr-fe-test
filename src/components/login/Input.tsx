@@ -6,7 +6,6 @@ const Input = ({
   name,
   value,
   onChange,
-  onSubmit,
   inset = false,
 }: InputProps) => {
   const [showPwd, setShowPwd] = useState(false);
