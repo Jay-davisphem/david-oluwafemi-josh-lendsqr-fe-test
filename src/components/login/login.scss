@@ -1,3 +1,127 @@
+@import "../../utils";
 .login {
-  color: red;
+  margin: auto;
+  max-width: 95%;
+  font-size: 16px;
+  .logo {
+    max-width: 100%;
+    margin: 5% 2% 2% 5%;
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .login-form {
+      #login {
+        input {
+          color: $primary-color;
+          width: 447px;
+          height: 50px;
+          border-radius: 5px;
+          border: 2px solid $border-col;
+          margin-bottom: 24px;
+          font-size: 14px;
+          &::placeholder {
+            color: $secondary-color;
+          }
+          padding-left: 15px;
+          &:focus {
+            outline: 2px solid $border-col;
+          }
+        }
+        [type="submit"] {
+          border-radius: 8px;
+          //width: 447px;
+          margin-top: 24px;
+          padding: 0;
+          color: white;
+          border: 0;
+          background-color: $btn-col;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        .input-asides {
+          margin-left: -12%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.link-like {
+  color: $btn-col;
+  text-decoration: none;
+  font-size: 0.8rem;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.l-welcome {
+  color: $primary-color;
+  margin: 0 0 15px 0;
+  font-size: 2em;
+}
+.l-s-welcome {
+  color: $secondary-color;
+  opacity: 0.7;
+  margin: 0 0 40px 0;
+}
+
+@media (max-width: 1080px) {
+  .login {
+    .flex {
+      justify-content: space-between;
+      .login-image {
+        img {
+          max-width: 100%;
+        }
+      }
+      .login-form {
+        #login {
+          input {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+  .link-like {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .login {
+    .flex {
+      margin-top: 40px;
+      text-align: center;
+      flex-direction: column;
+      .login-image {
+        display: none;
+      }
+      .login-form {
+        #login {
+          //background-image: url(/pablo-sign-in\ 1.svg);
+          input {
+            width: 80vw;
+          }
+          .input-asides {
+            display: inline-block;
+            position: absolute;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+  }
+  .link-like {
+    display: block;
+    font-size: 0.5rem;
+  }
+  .l-welcome,
+  .l-s-welcome,
+  .link-like {
+    text-align: left;
+  }
 }

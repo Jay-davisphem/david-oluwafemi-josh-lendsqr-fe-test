@@ -1,15 +1,4 @@
-$secondary-color: #213f7d;
-$primary-color: #545f7d;
-$bg-color: #ffffff;
-$icon-color: #213f7d;
-$u-color: #df18ff; // user color
-$active-u-col: #5718ff; // active user color
-$loaned-u-col: #f55f44; // users with loans color
-$saving-col: #ff3366;
-$btn-col: #39cdcc;
-$inp-bor-col: $primary-color;
-$link-color: $btn-col;
-
+@import "./utils";
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -20,4 +9,14 @@ $link-color: $btn-col;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  background-color: $bg-color;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*::selection {
+  color: white;
+  background-color: $btn-col;
 }
